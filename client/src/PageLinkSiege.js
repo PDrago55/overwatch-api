@@ -9,9 +9,10 @@ function PageLinkSiege() {
           <div className="Title"> My Stats</div>
           <img
             src="SingleStats.jpeg"
+            className="imgDiv"
             alt="1"
             height="350px"
-            width="350px"
+            width="400px"
           ></img>
           <p className="textover">View My Stats</p>
         </StyledLink>
@@ -19,14 +20,26 @@ function PageLinkSiege() {
       <div className="ImageDiv">
         <StyledLink to="/myteam">
           <div className="Title">Team Stats</div>
-          <img src="SiegeSquad.jpg" alt="2" height="350px" width="350px"></img>
+          <img
+            src="SiegeSquad.jpg"
+            className="imgDiv"
+            alt="2"
+            height="350px"
+            width="400px"
+          ></img>
           <p className="textover">Learn Your Stacks Stats</p>
         </StyledLink>
       </div>
       <div className="ImageDiv">
         <StyledLink to="/">
           <div className="Title"> Map Pool</div>
-          <img src="MapPool.jpg" alt="3" height="350px" width="350px"></img>
+          <img
+            src="MapPool.jpg"
+            className="imgDiv"
+            alt="3"
+            height="350px"
+            width="400px"
+          ></img>
           <p className="textover">Get To Learn About The Maps</p>
         </StyledLink>
       </div>
@@ -46,12 +59,16 @@ const Container = styled.div`
   border: 1px solid black;
   box-shadow: 3px 3px 5px 6px #ccc;
   border-radius: 15px;
-  margin: 20px 10px;
+  margin: 20px 50px;
   .ImageDiv {
     padding: 25px;
     &:hover {
-      opacity: 0.5;
+      opacity: 0.7;
     }
+  }
+  .imgDiv{
+    border: solid 1px #ffffff;
+    border-radius: 15px;
   }
   .Title {
     text-align: center;
@@ -70,11 +87,10 @@ const Container = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     .ImageDiv {
-      padding: 25px 0px;
+      padding: 25px 5x;
       &:hover {
         opacity: 0.5;
       }
   }
-
 `;
 export default PageLinkSiege;

@@ -3,30 +3,44 @@ import styled from "styled-components";
 function GitCredit() {
   return (
     <>
-      <div>The Website was Built by Stephen Prizio and Paolo Drago</div>
+      <HeaderPrint>
+        The Website was Built by Stephen Prizio and Paolo Drago
+      </HeaderPrint>
       <Container>
         <div className="card">
-          <img
-            className="imageStlye"
-            src="Headshot.JPG"
-            alt="1"
-            height="100px"
-            width="100px"
-          ></img>
-          <div>
-            Paolo is a Full-Stack Web Developer specializing in Javascript.
+          <div className="smallCard">
+            <a className="link" href="https://github.com/PDrago55">
+              <div className="imageHolder">
+                <img
+                  className="imageStlye"
+                  src="Headshot.JPG"
+                  alt="1"
+                  height="200px"
+                  width="200px"
+                ></img>
+              </div>
+              <div className="description">
+                Paolo is a Full-Stack Web Developer specializing in Javascript.
+              </div>
+            </a>
           </div>
         </div>
         <div className="card">
-          <img
-            className="imageStlye"
-            src="Headshot.JPG"
-            alt="2"
-            height="100px"
-            width="100px"
-          ></img>
-          <div>
-            Stephen is a Full-Stack Software Developer specializing in Java.
+          <div className="smallCard">
+            <a className="link" href="https://github.com/sPrizio">
+              <div className="imageHolder">
+                <img
+                  className="imageStlye"
+                  src="Headshot.JPG"
+                  alt="2"
+                  height="200px"
+                  width="200px"
+                ></img>
+              </div>
+              <div className="description">
+                Stephen is a Full-Stack Software Developer specializing in Java.
+              </div>
+            </a>
           </div>
         </div>
       </Container>
@@ -34,20 +48,69 @@ function GitCredit() {
   );
 }
 
+const HeaderPrint = styled.h1`
+  text-align: center;
+  margin: 25px 0px;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
   .imageStlye {
     border-radius: 50%;
+    border: 1px solid black;
+  }
+  .link {
+    text-decoration: none;
+    color: #000000;
   }
   .card {
-    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 50%;
     height: 50%;
+    margin-bottom: 60px;
+  }
+  .imageHolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .smallCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 50%;
+    height: 250px;
+    padding: 50px;
+    transition: transform 1s;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+  .description {
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .imageStlye {
+      height: 100px;
+      width: 100px;
+    }
   }
 `;
 

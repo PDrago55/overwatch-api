@@ -16,8 +16,11 @@ function LandingPage() {
 }
 
 const Container = styled.div`
+  padding-top: 7%;
+  padding-bottom: 7%;
   .title {
     text-align: center;
+    font-size: 36px;
   }
 `;
 export default LandingPage;
