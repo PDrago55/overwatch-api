@@ -54,12 +54,13 @@ const StyledLink = styled(NavLink)`
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid black;
   box-shadow: 3px 3px 5px 6px #ccc;
   border-radius: 15px;
-  margin: 20px 50px;
+  padding: 20px;
+  margin: 80px 25px;
   .ImageDiv {
     padding: 25px;
     &:hover {
