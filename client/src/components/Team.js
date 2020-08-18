@@ -12,7 +12,6 @@ function Team() {
   //redux creating my dispatch to get my actions aka State getter
   const dispatch = useDispatch();
   const teamStats = useSelector((state) => state.team.team);
-  console.log(teamStats);
   useEffect(() => {
     dispatch(requestTeamStats());
     fetch("/api/squad/all")
@@ -26,7 +25,6 @@ function Team() {
   }, []);
   return (
     <Container>
-      <h1>Teams</h1>
       {teamStats.map((team) => {
         return (
           <>

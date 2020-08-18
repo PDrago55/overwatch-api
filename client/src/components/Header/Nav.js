@@ -8,7 +8,9 @@ function Nav() {
     <Container>
       <Logo />
       <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="#">About</StyledLink>
+      <a className="ref" href="#section1">
+        About
+      </a>
       <StyledLink to="/myteam">Team Stats</StyledLink>
       <StyledLink to="/mystats">My Stats</StyledLink>
       <StyledLink to="/mappool">Map Pool</StyledLink>
@@ -25,6 +27,27 @@ const Container = styled.div`
   margin: 0 auto;
   height: 50px;
   width: 100%;
+  .ref {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 0%;
+      background-color: #fff;
+      transition: all ease-in-out 250ms;
+    }
+    &:hover::before {
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+    }
+  }
 `;
 
 const StyledLink = styled(NavLink)`

@@ -5,6 +5,7 @@ import SingleStats from "./SinglesStats";
 import Team from "./Team";
 import MapPool from "./MapPool";
 import Header from "./Header/Header";
+import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 function App() {
   // useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <div>
         <Header />
       </div>
+      <GlobalStyles />
       <Switch>
         <Route exact path="/">
           <LandingPage />

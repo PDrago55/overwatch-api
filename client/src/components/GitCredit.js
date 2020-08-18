@@ -7,7 +7,7 @@ function GitCredit() {
         The Website was Built by Stephen Prizio and Paolo Drago
       </HeaderPrint>
       <Container>
-        <div className="card">
+        <div className="card" id="section1">
           <div className="smallCard">
             <a className="link" href="https://github.com/PDrago55">
               <div className="imageHolder">

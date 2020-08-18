@@ -31,7 +31,7 @@ function PageLinkSiege() {
         </StyledLink>
       </div>
       <div className="ImageDiv">
-        <StyledLink to="/">
+        <StyledLink to="/mappool">
           <div className="Title"> Map Pool</div>
           <img
             src="MapPool.jpg"
